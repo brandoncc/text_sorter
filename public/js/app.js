@@ -3,6 +3,7 @@ var App = {
   sortType: 'characters',
   ignoreCase: false,
   fadeTransition: false,
+  wordBoundaries: /\s.,!\?;\//,
   init: function() {
     this.sortText = new SortText();
     this.items = new Items();
@@ -11,4 +12,4 @@ var App = {
   }
 };
 
-App.init();
+$(App.init.bind(App));

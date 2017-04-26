@@ -38,7 +38,7 @@ var Items;
       var counts = App.sortText.getPartsToSort();
 
       if (_.contains(Object.keys(counts), ' ')) {
-        counts['[SPACE]'] = counts[' '];
+        counts[Item.spaceText] = counts[' '];
         delete counts[' '];
       }
 

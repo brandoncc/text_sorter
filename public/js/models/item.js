@@ -10,3 +10,5 @@ var Item = Backbone.Model.extend({
     this.view = new ItemView({ model: this });
   }
 });
+
+Item.spaceText ='[SPACE]';

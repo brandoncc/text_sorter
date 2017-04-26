@@ -1,7 +1,22 @@
 var ItemView = Backbone.View.extend({
+  events: {
+    'mouseover': 'mouseover',
+    'mouseout': 'mouseout',
+    'click': 'removeItem'
+  },
   tagName: 'li',
   className: 'sorted-item',
   template: _.template($('#item-template').html()),
+  mouseover: function() {
+    this.$el.addClass('hover');
+  },
+  mouseout: function() {
+    this.$el.removeClass('hover');
+  },
+  removeItem: function() {
+   App.sortText.removeText(this.model.get('value'));
+    App.items.remove(this.model);
+  },
   render: function() {
     if (App.fadeTransition) {
       // We only want to fade in on initial render, not on updates

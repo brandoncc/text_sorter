@@ -24,5 +24,11 @@ var FormView = Backbone.View.extend({
   },
   changeFadeTransition: function(e) {
     App.fadeTransition = e.target.checked;
+  },
+  updateText: function() {
+    this.$('input[type="text"]').val(App.sortText.get('text'));
+  },
+  initialize: function() {
+    this.listenTo(App.sortText, 'updated_manually', this.updateText);
   }
 });
