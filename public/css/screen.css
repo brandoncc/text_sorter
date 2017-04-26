@@ -1,0 +1,158 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto");
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: roboto;
+}
+
+header {
+  display: block;
+  background-color: #31314e;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 1.2em 1em;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  margin: 40px 0 40px 20px;
+}
+
+main > ul {
+  padding: 0;
+}
+
+.sorted-item {
+  display: inline-block;
+  padding: 20px 30px;
+  border: 1px solid orange;
+  border-radius: 10px;
+  margin: 10px 20px 10px 0;
+}
+
+.sorted-item .count {
+  font-size: .7em;
+  opacity: .5;
+}
+
+.sorted-item .count::before {
+  content: ' x '
+}
+
+section#input {
+  margin: 40px 20px;
+}
+
+form [type="text"] {
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 2em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Credit to http://codepen.io/samkeddy/pen/PbROLK/ for the radio groups */
+.radio-group input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.radio-group label {
+  color: #9a929e;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+.radio-group input[type=radio]:checked + label {
+  color: white;
+  background: #727285;
+}
+
+.radio-group label + input[type=radio] + label {
+  border-left: solid 2px #727285;
+}
+
+.radio-group {
+  border: solid 2px #727285;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.radio-group label {
+  font-size: 12px;
+}
+
+.check {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+}
+
+/*
+ Credit to http://www.inserthtml.com/2012/06/custom-form-radio-checkbox/
+ for checkboxes 
+ */
+.check label {
+	display: inline;
+  color: #9a929e;
+  cursor: pointer;
+}
+
+.check .regular-checkbox {
+	display: none;
+}
+
+.check .regular-checkbox + label {
+  border: solid 2px #727285;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 5px 10px 6px 35px;
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+  font-size: 12px;
+}
+
+.check .regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.check .regular-checkbox:checked + label {
+	background-color: #727285;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: white;
+}
+
+.check .regular-checkbox + label:after {
+	content: '\2718';
+  font-family: Wingdings, 'Zapf Dingbats';
+	font-size: 18px;
+	position: absolute;
+	top: 4px;
+	left: 8px;
+	color: #9a929e;
+}
+
+.check .regular-checkbox:checked + label:after {
+	content: '\2714';
+  color: white;
+}
+
+.controls {
+  display: inline-block;
+  vertical-align: top;
+}

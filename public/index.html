@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Backbone.js Text Sorter</title>
+    <link rel="stylesheet" href="css/screen.css">
+  </head>
+  <body>
+    <header>
+      <h1>Text Sorter</h1>
+    </header>
+    <section id="input">
+      <form>
+        <input type="text" placeholder="Enter some text to sort">
+        <div class="controls">
+          <div class="radio-group">
+            Sort By
+            <input type="radio" name="sort-by" value="alphabetical" id="sort-by-alphabetical" checked>
+            <label for="sort-by-alphabetical">Alphabetical</label>
+            <input type="radio" name="sort-by" value="count" id="sort-by-count" >
+            <label for="sort-by-count">Count</label>
+          </div>
+          <div class="radio-group">
+            Sort Type
+            <input type="radio" name="sort-type" value="characters" id="sort-characters" checked>
+            <label for="sort-characters">Characters</label>
+            <input type="radio" name="sort-type" value="words" id="sort-words">
+            <label for="sort-words">Words</label>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="check">
+            <input type="checkbox" id="ignore-case" class="regular-checkbox" /><label for="ignore-case">Ignore Case</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="fade-transition" class="regular-checkbox" /><label for="fade-transition">Fade Transition</label>
+          </div>
+        </div>
+      </form>
+    </section>
+    <main>
+      <ul></ul>
+    </main>
+
+    <script id="item-template" type="text/template">
+      <%= value %><span class="count"><%= count %></span>
+    </script>
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+    <script src="js/models/item.js"></script>
+    <script src="js/models/sort_text.js"></script>
+    <script src="js/collections/items.js"></script>
+    <script src="js/views/form.js"></script>
+    <script src="js/views/item.js"></script>
+    <script src="js/views/sorted_items.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
